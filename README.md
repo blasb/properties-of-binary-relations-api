@@ -1,6 +1,6 @@
-# API para consultar las propiedades de una relacion binaria
+# API para consultar las propiedades de una relación binaria
 
-## Descripcion
+## Descripción
 
 API que recibe un json con un conjunto A y una relación R de A en A y devuelve un json determinando si R es reflexiva, simétrica, antisimétrica y transitiva.
 
