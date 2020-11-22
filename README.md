@@ -2,7 +2,7 @@
 
 ## Descripcion
 
-API que recibe un json con un conjunto A y una relacion R de A en A y devuelve un json determinando si R es reflexiva, simetrica, antisimetrica y transitiva.
+API que recibe un json con un conjunto A y una relación R de A en A y devuelve un json determinando si R es reflexiva, simétrica, antisimétrica y transitiva.
 
 ## Ejemplo
 
@@ -15,7 +15,7 @@ Si se recibe en el body de un post el siguiente json:
 }
 ```
 
-El resultado sera:
+El resultado será:
 ```json
 {
     "antisimetrica": true,
@@ -27,13 +27,10 @@ El resultado sera:
 
 ## Modo de uso
 
-Requisitos:
+Para levantar el servidor localmente:
 
-- Poder correr script bash.
-- Tener Docker instalado.
+- Si se tiene `swipl` instalado ejecutar `swipl -g "server(<port>)." server.pl` indicando el puerto. Por ejemplo: `swipl -g "server(5000)." server.pl`
+- Si no se tiene swipl se puede iniciar la aplicación en un docker container ejecutando `./run-container <port>` indicando el puerto. Ejemplo: `./run-container 5000`. El contenedor se elimina una vez se cierra la aplicación.
 
-Para crear un contenedor con el servidor corriendo ejecutar `./run-container \<port\>` especificando el puerto que se desee. Ejemplo: `./run-container 5000`.
-
-Enviar por post request a http://localhost:<port\>
-  
-El contenedor se elimina una vez se cierra la aplicacion.
+Para usar la API:
+- Enviar por post request a `http://localhost:<port>`
