@@ -52,7 +52,7 @@ antisymmetric(L) :- antisymmetric2([],L).
 antisymmetric2(_,[]).
 antisymmetric2(P1, [[E1,E2] | TP2]) :-
     append(P1, [[E1,E2] | TP2], R),
-    ( rel(E2,E1, R) -> E1 = E2; true ),
+    \+((rel(E2,E1,R), E1 \= E2)),
     append(P1,[[E1,E2]], P1new),
     antisymmetric2(P1new, TP2).
 
@@ -71,6 +71,6 @@ transitive(L) :- transitive2([],L).
 transitive2(_,[]).
 transitive2(P1, [[E1,E2] | TP2]) :-
     append(P1, [[E1,E2] | TP2], R),
-    ( rel(E2,X,R) -> rel(E1,X,R) ; true ),
+    \+((rel(E2,X,R), \+(rel(E1,X,R)))),
     append(P1,[[E1,E2]], P1new),
     transitive2(P1new, TP2).
