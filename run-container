@@ -1,0 +1,3 @@
+#!/bin/bash
+
+docker run -it --rm -v $(pwd):/app -w /app -p $1:$1 swipl swipl -g "server($1)." server.pl
