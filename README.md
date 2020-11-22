@@ -33,4 +33,4 @@ Para levantar el servidor localmente:
 - Si no se tiene swipl se puede iniciar la aplicación en un docker container ejecutando `./run-container <port>` indicando el puerto. Ejemplo: `./run-container 5000`. El contenedor se elimina una vez se cierra la aplicación.
 
 Para usar la API:
-- Enviar por post request a `http://localhost:<port>`
+- Enviar por post request a `http://localhost:<port>`.
