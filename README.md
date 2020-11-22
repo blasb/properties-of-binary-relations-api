@@ -2,7 +2,7 @@
 
 ## Descripción
 
-API que recibe un json con un conjunto A y una relación R de A en A y devuelve un json determinando si R es reflexiva, simétrica, antisimétrica y transitiva.
+API que recibe en formato json un conjunto A y una relación R de A en A y devuelve en formato json si R es reflexiva, simétrica, antisimétrica y transitiva.
 
 ## Ejemplo
 
